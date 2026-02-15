@@ -11,10 +11,16 @@
     <bean id="alien" class="org.aditya.Alien" scope="singleton"/>
     if we assigning a primitive value then we use value property
     but if we assigning a reference then we use ref keyword
+    <property name="age" value= "32" />
     -->
     <bean id="alien" class="org.aditya.Alien">
-        <property name="age" value= "32" />
-        <property name="laptop" ref="lap" />
+<!--        <constructor-arg value="43" type="int"/>-->
+<!--        <constructor-arg ref="lap" type="org.aditya.Laptop"/>-->
+<!--        <property name="laptop" ref="lap" />-->
+<!--        <constructor-arg value="43" index="0"/>-->
+<!--        <constructor-arg ref="lap" index="1"/>-->
+            <constructor-arg value="43" name="age"/>
+            <constructor-arg ref="lap" name="laptop"/>
     </bean>
     <bean id="lap" class="org.aditya.Laptop">
 

@@ -6,7 +6,10 @@ public class Alien {
     public Alien(){
         System.out.println("alien called");
     }
-
+    public Alien(int age, Laptop laptop){
+        this.age = age;
+        this.laptop = laptop;
+    }
     public int getAge() {
         return age;
     }
