@@ -1,4 +1,6 @@
 package org.aditya;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * Hello world!
@@ -8,6 +10,12 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+        Alien alien = (Alien) context.getBean("alien");
+        //alien.setAge(21);
+        System.out.println(alien.getAge());
+        alien.code();
+//        Alien alien2 = (Alien) context.getBean("alien");
+//        System.out.println(alien2.age);
     }
 }

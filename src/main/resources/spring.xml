@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- based on scope type of bean it created object of the class
+    Singleton, Prototype mostly we used in rest
+    Request and Session mostly we used in soap
+    Singleton -> when u want only same object whenever u ask for object
+    Prototype -> it will create new object everytime when we say getBean().
+    <bean id="alien" class="org.aditya.Alien" scope="singleton"/>
+    -->
+    <bean id="alien" class="org.aditya.Alien" scope="singleton">
+        <property name="age" value= "32" />
+    </bean>
+
+</beans>
